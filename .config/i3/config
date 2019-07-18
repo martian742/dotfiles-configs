@@ -10,6 +10,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+#fake-outputs 3360x1050+0+0
+#fake-outputs 3200x1200+0+0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -178,4 +180,10 @@ bar {
 
 # martian's startup stuff
 hide_edge_borders smart
-exec --no-startup-id /usr/bin/xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 1
+exec --no-startup-id /usr/bin/xinput set-prop 'SynPS/2 Synaptics TouchPad' 'libinput Tapping Enabled' 0
+exec --no-startup-id /usr/bin/xinput set-prop 'SynPS/2 Synaptics TouchPad' 'Device Enabled' 0
+exec --no-startup-id /usr/bin/nm-applet
+exec --no-startup-id /usr/bin/flameshot
+exec --no-startup-id /usr/bin/parcellite
+exec --no-startup-id /usr/bin/keepassxc
+for_window [class="^rdesktop"] floating disable
